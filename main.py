@@ -26,7 +26,7 @@ while True:
     response = requests.get(url, headers=header)
     soup = BeautifulSoup(response.text, "html.parser")
 
-    price_site = soup.select_one("span.andes-money-amount__fraction").text
+    price_site = soup.select_one('span.andes-money-amount__fraction').text
     price_str = price_site.strip()
     price_int = int(price_str.replace(".", "").replace(",", ""))
 
